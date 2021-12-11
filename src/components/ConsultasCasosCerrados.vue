@@ -11,14 +11,18 @@
                   <div class="container-table">
             <table>
                 <tr>
-                    <th>Header1</th>
-                    <th>Header2</th>
-                    <th>Header3</th>
+                    <th>Cédula</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Fecha desaparición</th>
+                    <th>Ciudad</th>
                 </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>0123456789</td>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>2021/12/11</td>
+                        <td>Bogotá</td>
                     </tr>
             </table>
         </div>
