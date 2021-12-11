@@ -10,15 +10,20 @@
         <button v-if="is_auth" v-on:click="logOut"> Cerrar Sesión </button>
         <button v-if="!is_auth" v-on:click="loadLogIn" > Iniciar Sesión </button>
         <button v-if="!is_auth" v-on:click="loadSignUp" > Registrarse </button>
+        <button v-if="!is_auth" v-on:click="loadPruevas" > Pruvas </button>
       </nav>
     </div>
     
 
     <div class="main-component">
       <router-view  
+        v-on:loadPruevas="loadPruevas"
         v-on:completedLogIn="completedLogIn"
         v-on:completedSignUp="completedSignUp"
         v-on:logOut="logOut"
+        
+
+
       >
       </router-view>
     </div>
@@ -59,6 +64,9 @@ export default {
 
     loadLogIn: function(){
       this.$router.push({name: "logIn"})
+    },
+    loadPruevas: function(){
+      this.$router.push({name: "homeAdmin"})
     },
 
     loadSignUp: function(){

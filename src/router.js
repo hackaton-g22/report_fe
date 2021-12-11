@@ -3,6 +3,7 @@ import App from './App.vue';
 import LogIn from './components/LogIn.vue'
 import SignUp from './components/SignUp.vue'
 import Home from './components/Home.vue'
+import HomeAdmin from './components/HomeAdmin.vue'
 
 const routes = [{
   path: '/',
@@ -24,6 +25,11 @@ const routes = [{
   name: "home",
   component: Home
   },
+  {
+    path: '/user/admin',
+    name: "homeAdmin",
+    component: HomeAdmin
+    },
 ];
 const router = createRouter({
   history: createWebHistory(),
