@@ -3,13 +3,27 @@
         <div class="container_signUp_user">
             <h2>Registrarse</h2>
             <form v-on:submit.prevent="processSignUp" >
-                <input type="text" v-model="user.username" placeholder="Documento">
+                <input type="number" v-model="user.username" placeholder="Número de cédula">
+                <br>
+                <input type="text" v-model="user.us_nombre" placeholder="Nombres">
+                <br>
+                <input type="text" v-model="user.us_apellido" placeholder="Apellidos">
+                <br>
+                <input type="email" v-model="user.email" placeholder="Correo electrónico">
+                <br>
+                <input type="text" v-model="user.us_direccion" placeholder="Dirección">
+                <br>
+                <input type="text" v-model="user.us_ciudad" placeholder="Ciudad">
+                <br>
+                <input type="text" v-model="user.us_departamento" placeholder="Departamento">
+                <br>
+                <input type="number" v-model="user.us_telefono" placeholder="Teléfono">
+                <br>
+                <input type="text" v-model="user.us_entidad" placeholder="Entidad a la que representa">
                 <br>
                 <input type="password" v-model="user.password" placeholder="Contraseña">
                 <br>
-                <input type="text" v-model="user.name" placeholder="Nombre">
-                <br>
-                <input type="email" v-model="user.email" placeholder="Email">
+                <input type="password" v-model="user.repassword" placeholder="Confirme su contraseña">
                 <button type="submit">Registrarse</button>
             </form>
         </div>
@@ -23,10 +37,17 @@
         data: function(){
             return {
                 user: {
-                    username: "",
-                    password: "",
-                    name: "",
-                    email: ""
+                    username           : "",
+                    us_nombre          : "",
+                    us_apellido        : "",
+                    email              : "",
+                    us_direccion       : "",
+                    us_ciudad          : "",
+                    us_departamento    : "",
+                    us_telefono        : "",
+                    us_entidad         : "",
+                    password           : "",
+                    repassword         : "",
                 }
             }
         },
@@ -68,8 +89,8 @@
     .container_signUp_user {
         border: 3px solid #283747;
         border-radius: 10px;
-        width: 25%;
-        height: 80%;
+        /* width: 25%;
+        height: 80%; */
         display: flex;
         flex-direction: column;
         justify-content: center;
